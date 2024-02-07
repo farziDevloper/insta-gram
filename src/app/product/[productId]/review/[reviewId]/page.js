@@ -4,10 +4,18 @@
  */
 
 import React from "react";
+import styles from "../../../../../css/newcss.module.css";
+import Image from "next/image";
+import MyImage from "../../../../../../public/image.jpg";
 
 const reviewId = ({ params }) => {
   //nesteed dynamic routing for sceen inside the screen.
-  return <div>review Id {params.reviewId} </div>;
+  return (
+    <div className={styles.text_size}>
+      review Id {params.reviewId} and product id is {params.productId}{" "}
+      <Image src={MyImage} />
+    </div>
+  );
 };
 
 export default reviewId;
