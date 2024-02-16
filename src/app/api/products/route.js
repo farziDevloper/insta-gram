@@ -14,7 +14,7 @@ export const POST = async (req, res) => {
 
   // now we are handling formdata which is sent from frontend  or any other server
   const formData = await req.formData();
-  console.log(formData.get("name"));
+  console.log(formData);
 
   return NextResponse.json({ msg: "success post api" });
 };
